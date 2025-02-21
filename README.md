@@ -7,7 +7,7 @@ Welcome to the Data Structures Class Repository! This repository contains implem
 
 The repository is organized into folders corresponding to different data structures. You can navigate to each data structure's implementation using the links below:
 
-- [Singly Linked List](LinkedList/)
+- [Singly Linked List](Singly_linked_list/)
 
 ## Implemented Data Structures
 
