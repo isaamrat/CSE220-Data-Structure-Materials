@@ -9,6 +9,7 @@ The repository is organized into folders corresponding to different data structu
 
 - [Singly Linked List](Singly_linked_list/)
 - [Doubly Linked List](Doubly_linked_list/)
+- [Dummy Headed Doubly Circular Linked List](dummy_headed_doubly_circular_liinked_list/)
 
 ## Implemented Data Structures
 
