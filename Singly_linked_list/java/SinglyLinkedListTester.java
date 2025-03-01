@@ -123,6 +123,26 @@ class SinglyLinkedList {
         }
         return "Successful";
     }
+
+    public void reverseList() {
+        Node prevNode = null;  // Initialize prevNode to store the previous node during reversal
+        Node current = this.head;  // Start from the current head of the linked list
+        
+        // Traverse through the linked list until current becomes null (end of the list)
+        while (current != null) {
+            Node nextNode = current.next;  // Store the next node in nextNode before changing current.next
+            
+            current.next = prevNode;  // Reverse the pointer of current node to point to the previous node
+            
+            // Move prevNode and current one step forward in the linked list
+            prevNode = current;
+            current = nextNode;
+        }
+        
+        // Update the head of the linked list to point to the last node (which is now the first)
+        this.head = prevNode;
+    }
+    
 }
 
 public class SinglyLinkedListTester {
@@ -164,5 +184,13 @@ public class SinglyLinkedListTester {
             System.out.println("\nTest Case 7: Get node at index 4");
             System.out.println("Element at index 4: " + node.elem); // Output: Element at index 4: 4
         }
+
+        // Test Case 8: Reverse a linked list
+        int[] arr2 = { 1, 2, 3, 4, 5 };
+        SinglyLinkedList list8 = new SinglyLinkedList();
+        list8.arrayToListBuilder(arr2);
+        System.out.println("\nTest Case 8: Reverse a linked list");
+        list8.reverseList();
+        list8.printList(); // Output: Linked List: 5 -> 4 -> 3 -> 2 -> 1 -> null
     }
 }

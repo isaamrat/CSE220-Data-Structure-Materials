@@ -82,6 +82,29 @@ class SinglyLinkedList:
             prev = self.nodeAt(indx - 1)
             if prev.next is not None:
                 prev.next = prev.next.next  # Remove node at given index
+    
+    def reverseList(self):
+        # Initialize prevNode to None to store the previous node during reversal
+        prevNode = None
+        
+        # Start from the current head of the linked list
+        current = self.head
+        
+        # Traverse through the linked list until current becomes None (end of the list)
+        while current is not None:
+            # Store the next node in nextNode before changing current.next
+            nextNode = current.next
+            
+            # Reverse the pointer of current node to point to the previous node
+            current.next = prevNode
+            
+            # Move prevNode and current one step forward in the linked list
+            prevNode = current
+            current = nextNode
+        
+        # Update the head of the linked list to point to the last node (which is now the first)
+        self.head = prevNode
+
 
 # Tester code
 if __name__ == "__main__":
@@ -121,3 +144,11 @@ if __name__ == "__main__":
     result = list1.remove(10)
     print("\nTest Case 7: Remove node at index 10 (out of bounds)")
     print(result)  # Expected output: Not valid
+
+    # Test Case 8: Reverse a linked list
+    arr = [1, 2, 3, 4, 5]
+    list8 = SinglyLinkedList()
+    list8.array_to_list_builder(arr)
+    print("\nTest Case 8: Reverse a linked list")
+    list8.reverseList()
+    list8.print_list()  # Expected output: 5 -> 4 -> 3 -> 2 -> 1 -> None
