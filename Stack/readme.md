@@ -14,7 +14,7 @@ In this guide, we will implement a stack using a **linked list** in both **Java*
 
 ---
 
-## [Java Implementation](Stack/java/StackTester.java)
+## [Java Implementation](java/StackTester.java)
 
 ### Code Explanation
 
@@ -170,7 +170,7 @@ public class StackTester {
 
 ---
 
-## [Python Implementation](Stack/python/stack.py)
+## [Python Implementation](python/stack.py)
 
 ### Code Explanation
 
