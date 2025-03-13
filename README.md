@@ -12,6 +12,7 @@ The repository is organized into folders corresponding to different data structu
 - [Dummy Headed Doubly Circular Linked List](Dummy_headed_doubly_circular_liinked_list/)
 - [Multi dimensional Array / Two dimensional array](Two_dimensional_array/)
 - [Hash Table](Hash_table/)
+- [Stack](Stack/)
 
 ## Implemented Data Structures
 
