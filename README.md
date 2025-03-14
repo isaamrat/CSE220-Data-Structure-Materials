@@ -13,6 +13,7 @@ The repository is organized into folders corresponding to different data structu
 - [Multi dimensional Array / Two dimensional array](Two_dimensional_array/)
 - [Hash Table](Hash_table/)
 - [Stack](Stack/)
+- [Queue](Queue/)
 
 ## Implemented Data Structures
 
