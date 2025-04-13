@@ -14,7 +14,8 @@ The repository is organized into folders corresponding to different data structu
 - [Hash Table](Hash_table/)
 - [Stack](Stack/)
 - [Queue](Queue/)
-
+- [Tree](Tree/)
+- [Binary Tree](Binary_Tree/)
 ## Implemented Data Structures
 
 Each data structure folder contains a Python and Java implementation along with relevant documentation and example usage.
