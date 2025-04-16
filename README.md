@@ -16,6 +16,7 @@ The repository is organized into folders corresponding to different data structu
 - [Queue](Queue/)
 - [Tree](Tree/)
 - [Binary Tree](Binary_Tree/)
+- [Binary Search Tree](Binary_Search_Tree/)
 ## Implemented Data Structures
 
 Each data structure folder contains a Python and Java implementation along with relevant documentation and example usage.
