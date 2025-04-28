@@ -422,19 +422,23 @@ In-order Predecessor: 60
 Sample 01:
   Given Array: [1, 2, 3]
   BST
+
     2
    / \
   1   3
+
   Output: Pre-order of created BST: 2 1 3
 -------------------
 Sample 02:
   Given Array: [1, 2, 3, 4]
   BST
+
       3
      / \
     2   4
    /
   1 
+  
   Output: Pre-order of created BST: 3 2 1 4
 ```
 #### 6.7: Given the root of a binary tree, check whether it is a BST or not. A BST is defined as follows:
@@ -444,13 +448,16 @@ node's key.
 3. Both the left and right subtrees must also be binary search trees
 ```
 Input 01:
+
     2
    / \
   1   3
 
 Output: 1
 
-Explanation: The left subtree of root node contains node With key lesser than the root nodes key and the right subtree of root node contains node with key greater than the root nodes key. Hence, the tree is a BSI
+Explanation: The left subtree of root node contains node With key lesser than the root nodes key and 
+the right subtree of root node contains node with key greater than the root nodes key. Hence, the 
+tree is a BSI
 -------------------
 Input 02:
 
@@ -478,6 +485,7 @@ Input: nums = {1, 2, 3, 4, 5, 6}
 Ouput: {4, 2, 1, 3, 6, 5, 7}
 Explanation:
 The preorder traversal of the following BST formed is {4, 2, 1, 3, 6, 5, 7}:
+
              4
            /  \
           /    \
