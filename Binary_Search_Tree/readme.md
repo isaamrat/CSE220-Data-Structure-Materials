@@ -1,4 +1,4 @@
-# Chapter 6: Binary Search Tree (BST) and Heap
+# Chapter 6: Binary Search Tree (BST)
 
 ## 6.1 Characteristics of a BST
 
@@ -133,12 +133,12 @@ Balanced BST:
 
 Unbalanced BST:
     70
-     \
-     90
       \
-      95
-       \
-       99
+       90
+        \
+         95
+          \
+           99
 ```
 
 
@@ -158,8 +158,8 @@ III. **Recursively apply the process** of choosing the middlemost values from th
         50
        / 
      30   
-    /    \
-   20     40
+    /  \
+   20  40
     \
     25  
       \
@@ -336,4 +336,184 @@ Balanced BST:
              50    99
             / \    /
           40   70 95
+```
+
+## Exercises
+#### 6.1: Convert the following unbalanced BSTs into balanced BSTs. Show simulation.
+
+```
+Tree1:
+          70
+         /  \
+        50   90
+       /      \
+      40       95 
+     /          \
+    20           99
+
+-----------------------
+Tree2:
+           70
+          /  \
+         /    \
+        50    90
+         \    / \
+         60  75 95 
+              \   \
+              85  99
+              /
+             79
+```
+
+<!-- ![Image](./assets/b1.png) -->
+
+#### 6.2: Insert keys 65, 105, 69 into the following BST and show the steps. Show simulation and code.
+
+```
+           70
+          /  \
+         /    \
+        50     90
+       / \     / \
+      40 60   80  95 
+     /       / \   \
+    20      75 85  99
+```
+
+#### 6.3: Delete keys 20, 95, 50, 70, 75 into the following BST and show the steps. Show simulation
+and code.
+```
+           70
+          /  \
+         /    \
+        50     90
+       / \     / \
+      40 60   80  95 
+     /   /   / \   \
+    20  55  75 85  99
+```
+#### 6.4: How can you print the contents of a tree in descending order with and without using stack? Solve using code.
+
+#### 6.5: Write a python program that takes the root of a tree and finds its inorder successor and
+predecessor.
+```
+           70
+          /  \
+         /    \
+        50     90
+       / \     / \
+      40 60   80  95 
+     /       / \   \
+    20      75 85  99
+
+Output for node 70:
+In-order Successor: 75
+In-order Predecessor: 60
+```
+
+#### 6.6: Given a sorted array, write a function that creates a Balanced Binary Search Tree using array elements. Follow the steps mentioned below to implement the approach:
+1. Set The middle element of the array as root.
+2. Recursively do the same for the left half and right half.
+3. Get the middle of the left half and make it the left child of the root created in step 1.
+4. Get the middle of the right half and make it the right child of the root created in step 1.
+5. Print the preorder of the tree.
+
+```
+Sample 01:
+  Given Array: [1, 2, 3]
+  BST
+    2
+   / \
+  1   3
+  Output: Pre-order of created BST: 2 1 3
+-------------------
+Sample 02:
+  Given Array: [1, 2, 3, 4]
+  BST
+      3
+     / \
+    2   4
+   /
+  1 
+  Output: Pre-order of created BST: 3 2 1 4
+```
+#### 6.7: Given the root of a binary tree, check whether it is a BST or not. A BST is defined as follows:
+1. The left subtree of a node contains only nodes with keys less than the node's key.
+2. The right subtree of a node contains only nodes with keys equal or greater than the
+node's key.
+3. Both the left and right subtrees must also be binary search trees
+```
+Input 01:
+    2
+   / \
+  1   3
+
+Output: 1
+
+Explanation: The left subtree of root node contains node With key lesser than the root nodes key and the right subtree of root node contains node with key greater than the root nodes key. Hence, the tree is a BSI
+-------------------
+Input 02:
+
+    2
+     \
+      7
+       \
+        6
+         \
+          5
+           \
+            9
+             \
+              2
+               \
+                6
+  
+Output: 0
+
+Explanation: Since the node with value 7 has right subtree nodes with keys less than 7, this is not a BST.
+```
+#### 6.8: Given a sorted array. Write a function that creates a Balanced Binary Search Tree using array elements. Height balanced BST means a binary tree in which the depth of the left subtree and the right subtree of every node never differ by more than 1
+```
+Input: nums = {1, 2, 3, 4, 5, 6}
+Ouput: {4, 2, 1, 3, 6, 5, 7}
+Explanation:
+The preorder traversal of the following BST formed is {4, 2, 1, 3, 6, 5, 7}:
+             4
+           /  \
+          /    \
+         2      6
+        / \    / \
+       1   3  5   7
+
+```
+#### 6.9: Given a BST, and a reference to a Node x in the BST. Find the Inorder Successor of the given node in the BST.
+```
+Input:
+          20
+         /  \
+        8   22
+       / \
+      4  12
+        /  \
+       10  14
+
+K(data of x) = 8
+Output: 10
+Explanation:
+Inorder Traversal: 4 8 10 12 14 20 22
+Hence, successor of 8 is 10
+```
+#### 6.10: Given a Binary search tree, your task is to complete the function which will return the Kth largest element without doing any modification in the Binary Search Tree.
+```
+Input:
+          20
+         /  \
+        8   22
+       / \
+      4  12
+        /  \
+       10  14
+
+K = 4
+Output: 12
 ```
