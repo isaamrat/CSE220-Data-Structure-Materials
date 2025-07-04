@@ -1,112 +1,122 @@
 class Node:
-    def __init__(self, val, next=None, prev=None):
-        self.elem = val
-        self.next = next
-        self.prev = prev
+    def __init__(self, val):
+        self.prev = None  # reference to the previous node
+        self.elem = val   # value stored in the node
+        self.next = None  # reference to the next node
 
-def arrayToDList(arr):
-    if not arr:
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None  # head of the list
+
+    # Converts a list to a doubly linked list
+    def arr_to_list(self, arr):
+        if not arr:
+            return
+        self.head = Node(arr[0])
+        tail = self.head
+
+        for i in range(1, len(arr)):
+            new_node = Node(arr[i])
+            tail.next = new_node
+            new_node.prev = tail
+            tail = new_node
+
+    # Returns the node at a specific index
+    def node_at(self, idx):
+        if idx < 0:
+            return None
+        temp = self.head
+        count = 0
+        while temp:
+            if count == idx:
+                return temp
+            count += 1
+            temp = temp.next
         return None
-    
-    head = Node(arr[0])
-    tail = head
-    for i in range(1, len(arr)):
-        newNode = Node(arr[i])
-        tail.next = newNode   # Link current tail to the new node
-        newNode.prev = tail   # Link new node back to current tail
-        tail = newNode        # Update tail to the new node
-    return head               # Return the head of the linked list
 
-def printList(head):
-    temp = head
-    while temp:
-        print(temp.elem, end=" <=> ")  # Print current node's element
-        temp = temp.next               # Move to the next node
-    print("None")                      # Print None at the end
-
-def nodeAt(head, indx):
-    temp = head
-    count = 0
-    while temp:
-        if count == indx:
-            return temp     # Return node if index matches
-        count += 1
-        temp = temp.next    # Move to the next node
-    return None             # Return None if index is out of bounds
-
-def insertAt(head, val, indx):
-    newNode = Node(val)
-    
-    if indx == 0:
-        # Insert at the beginning of the list
-        newNode.next = head       # Link newNode to current head
-        if head:
-            head.prev = newNode   # Link current head back to newNode
-        head = newNode            # Update head to newNode
-        
-    else:
-        current = nodeAt(head, indx)
-        if current:
-            prev = current.prev   # Get the previous node
-            
-            # Connect newNode between prev and current
-            newNode.next = current
-            newNode.prev = prev
-            
-            current.prev = newNode   # Link current node back to newNode
-            if prev:
-                prev.next = newNode  # Link previous node to newNode
+    # Inserts a node with value `val` at index `idx`
+    def insert(self, idx, val):
+        new_node = Node(val)
+        if idx == 0:
+            new_node.next = self.head
+            if self.head:
+                self.head.prev = new_node
+            self.head = new_node
         else:
-            print("Index out of bounds")
-    return head
+            prev_node = self.node_at(idx - 1)
+            if prev_node:
+                s = prev_node.next
+                prev_node.next = new_node
+                new_node.prev = prev_node
+                new_node.next = s
+                if s:
+                    s.prev = new_node
+
+    # Removes the node at index `idx`
+    def remove(self, idx):
+        if idx == 0 and self.head:
+            self.head = self.head.next
+            if self.head:
+                self.head.prev = None
+        else:
+            prev_node = self.node_at(idx - 1)
+            if prev_node and prev_node.next:
+                s = prev_node.next.next
+                prev_node.next = s
+                if s:
+                    s.prev = prev_node
+
+    # Prints the list in reverse order
+    def reverse_print(self):
+        temp = self.head
+        if not temp:
+            return
+
+        while temp.next:
+            temp = temp.next
+
+        while temp:
+            print(temp.elem)
+            temp = temp.prev
 
 
-# Test Cases
-print("Test Case 1:")
-listHead1 = arrayToDList([1, 2, 3, 4, 5])
-print("Original List:")
-printList(listHead1)
-print("Inserting 99 at index 1:")
-listHead1 = insertAt(listHead1, 99, 1)
-print("Modified List:")
-printList(listHead1)
-print()
+# Testing the doubly linked list
+if __name__ == "__main__":
+    dll = DoublyLinkedList()
 
-print("Test Case 2:")
-listHead2 = arrayToDList([10, 20, 30])
-print("Original List:")
-printList(listHead2)
-print("Inserting 0 at index 0:")
-listHead2 = insertAt(listHead2, 0, 0)
-print("Modified List:")
-printList(listHead2)
-print()
+    # Create a doubly linked list from array
+    arr = [10, 20, 30, 40, 50]
+    dll.arr_to_list(arr)
+    print("Original list (reverse print):")
+    dll.reverse_print()
 
-print("Test Case 3:")
-listHead3 = arrayToDList([100, 200, 300, 400])
-print("Original List:")
-printList(listHead3)
-print("Inserting 500 at index 4:")
-listHead3 = insertAt(listHead3, 500, 4)
-print("Modified List:")
-printList(listHead3)
-print()
+    # Insert at the beginning
+    dll.insert(0, 5)
+    print("\nAfter inserting 5 at index 0:")
+    dll.reverse_print()
 
-print("Test Case 4:")
-listHead4 = arrayToDList([11, 22, 33])
-print("Original List:")
-printList(listHead4)
-print("Inserting 44 at index 3:")
-listHead4 = insertAt(listHead4, 44, 3)
-print("Modified List:")
-printList(listHead4)
-print()
+    # Insert in the middle
+    dll.insert(3, 25)
+    print("\nAfter inserting 25 at index 3:")
+    dll.reverse_print()
 
-print("Test Case 5:")
-listHead5 = arrayToDList([])
-print("Original List (Empty):")
-printList(listHead5)
-print("Inserting 999 at index 0 into an empty list:")
-listHead5 = insertAt(listHead5, 999, 0)
-print("Modified List:")
-printList(listHead5)
+    # Insert at the end
+    dll.insert(7, 60)
+    print("\nAfter inserting 60 at the end:")
+    dll.reverse_print()
+
+    # Remove head
+    dll.remove(0)
+    print("\nAfter removing element at index 0:")
+    dll.reverse_print()
+
+    # Remove a middle element
+    dll.remove(3)
+    print("\nAfter removing element at index 3:")
+    dll.reverse_print()
+
+    # Remove last element
+    dll.remove(5)
+    print("\nAfter removing last element:")
+    dll.reverse_print()
