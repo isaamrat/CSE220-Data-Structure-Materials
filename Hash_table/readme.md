@@ -1,6 +1,4 @@
----
 # [Practice Problems](#practice-problems)
----
 
 # Hash Table Implementation
 
