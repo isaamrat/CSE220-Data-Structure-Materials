@@ -1,4 +1,4 @@
-# [Practice Problems](#practice-problems)
+# [Practice Problems Questions](#practice-problems)
 
 # Hash Table Implementation
 
@@ -495,7 +495,7 @@ Hash Table after deletion:
 Notice how keys 101 and 106 both hash to index 1, and keys 111 and 201 both hash to index 4 in both implementations, demonstrating collision handling through chaining.
 
 ---
-## Practice Problems
+- ## Practice Problems
  ## Question 1: Employee ID Hash Table with Forward Chaining
 
  In this task, you are asked to implement a **HashTable** class that stores key-value pairs, where the key is a **string (representing an employee ID)** and the value is a **string (representing the department name)**. The class should include a **hash_function** that computes the hash index based on the sum of ASCII values of each character in the key, then multiply each ASCII value by its position index (starting from 1) and finally sum these weighted values and take the modulus with the size of the hash table. The **insert()** method should insert a new key-value pair or update the value if the key already exists, using **forward chaining** to handle collisions. **If the key already exists, its value should be updated.** You are not allowed to use any built-in functions except len(). Assume the display method is already implemented.
