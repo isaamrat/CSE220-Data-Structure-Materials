@@ -11,7 +11,7 @@
  | 5 | [`merge_queues`](#problem-5-merge_queues) | Merge two sorted queues into one sorted queue | Queue operations only |
  | 6 | [`rearrange_positive_negative`](#problem-6-rearrange_positive_negative) | Rearrange queue with negatives first, then positives | Queue operations only |
  | 7 | [`find_first_negative_window`](#problem-7-find_first_negative_window) | Find first negative in every window of size k | Queue operations only |
- | 8 | [`circular_queue_simulation`](#problem-8-circular_queue_simulation) | Simulate circular queue operations with linear queue |
+ | 8 | [`circular_queue_simulation`](#problem-8-circular_queue_simulation) | Simulate circular queue operations with linear queue | Queue operations only |
  | 9 | [`check_palindrome`](#problem-9-check_palindrome) | Check if elements in queue form a palindrome | Queue & Stack operations only |
 
  ## Detailed Problem Specifications
