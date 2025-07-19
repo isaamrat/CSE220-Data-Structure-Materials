@@ -1,3 +1,5 @@
+# [Practice Problem](practice_problems.md)
+---
 # Queue Data Structure: A Comprehensive Guide
 
 ## Table of Contents
