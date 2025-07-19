@@ -1,4 +1,4 @@
- # Queue Problems Collection
+ # Queue - Practice Problems
 
  ## Problem Overview Table
 
