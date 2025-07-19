@@ -1,3 +1,5 @@
+# [Practice Problems](#https://github.com/isaamrat/CSE220-Data-Structure-Materials/blob/main/Stack/practice_problems.md)
+
 # Stack Implementation in Java and Python
 
 ## Introduction to Stack
