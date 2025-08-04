@@ -60,9 +60,9 @@ style="width:3.30208in;height:1.79167in" />
 > The above tree is a heap. Below is the array representation of the
 > above heap.
 
-| 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X   | T   | O   | G   | S   | M   | N   | E   | R   | Y   | Z   | C   |
+| 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+| X   | T   | O   | G   | S   | M   | N   | E   | R   | Y   | Z   |
 
 **Benefits of** **Using** **an** **Array** **for** **Heap**
 **Instead** **of** **a** **Linked** **List**
@@ -163,6 +163,7 @@ increasing a key.
 style="width:4.02083in;height:2.22917in" />
 
 After the swim() operation, the Heap will look like this:
+
 <img src="./assets/f1pygi41.png"
 style="width:3.72917in;height:1.82292in" />
 
@@ -423,4 +424,5 @@ function heapsort(A):
         heap_size[A] = heap_size[A] - 1
         max_heapify(A, 1)
 ```
+
 
