@@ -351,6 +351,7 @@ without using extra space for another array, modifying only the input
 array. Its worst-case time complexity is O(n log n).
 
 **Heapsort Simuation Example 01:**
+
 <img src="./assets/hdxbxhbt.png"
 style="width:7.13542in;height:5.55208in" />
 
@@ -424,5 +425,6 @@ function heapsort(A):
         heap_size[A] = heap_size[A] - 1
         max_heapify(A, 1)
 ```
+
 
 
