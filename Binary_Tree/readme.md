@@ -427,7 +427,7 @@ Post-order:
 [None, 15, 25, 35, 10, 35, 15, 18, None, None, None, 33, None, 5, None, 19, None, None, None, 16]
 
 ---
-**5.6:** Write a Python function `isSymmetric(root)` that takes the root of a binary tree, check
+**5.6:** Write a function `isSymmetric(root)` that takes the root of a binary tree, check
 whether it is a mirror of itself (i.e., symmetric around its center).
 ---
 ```
@@ -451,7 +451,7 @@ Output: Symmetric
 Output: Not Symmetric
 ```
 ---
-**5.7:** Write a Python function `isIdentical(root1, root2)` that takes the roots of two binary trees, check whether they are identical or not).
+**5.7:** Write a function `isIdentical(root1, root2)` that takes the roots of two binary trees, check whether they are identical or not).
 ---
 ```
 Tree1:
