@@ -7,13 +7,13 @@
 | Figure 1                   | Figure 2                            |
 | -------------------------- | ----------------------------------- |
 | A graph for a road network | A graph showing a Protein Structure |
-| <img src="./mvymhlcl.png" style="width:2.3125in;height:2.07292in" /> | <img src="./b5itgtou.png" style="width:2.51042in;height:2in" /> |
+| <img src="./assets/mvymhlcl.png" style="width:2.3125in;height:2.07292in" /> | <img src="./assets/b5itgtou.png" style="width:2.51042in;height:2in" /> |
 
 
 | Figure 3           | Figure 4                       |
 | ------------------ | ------------------------------ |
 | A Facebook network | Graph visualizing the internet |
-| <img src="./0ztmqbby.png" style="width:2.375in;height:1.76042in" /> | <img src="./tkpqj155.png" style="width:2.9375in;height:1.98958in" /> |
+| <img src="./assets/0ztmqbby.png" style="width:2.375in;height:1.76042in" /> | <img src="./assets/tkpqj155.png" style="width:2.9375in;height:1.98958in" /> |
 
 So far, we have learned about data structures that can store linear sequences (e.g., arrays, lists, stack, queues) and data structures that can represent non-linear hierarchical relationships (i.e., different types of trees).
 
@@ -107,7 +107,7 @@ Example: In road networks,
 
 | Figure 5                                                              | Figure 6                                                              |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| <img src="./xdcbtvo4.png" style="width:3.10417in;height:1.98958in" /> | <img src="./eqk2ilhl.png" style="width:3.10417in;height:1.98958in" /> |
+| <img src="./assets/xdcbtvo4.png" style="width:3.10417in;height:1.98958in" /> | <img src="./assets/eqk2ilhl.png" style="width:3.10417in;height:1.98958in" /> |
 | Weighted undirected graph                                             | Weighted directed graph                                               |
 
 ### Sparse vs. Dense Graphs
@@ -169,7 +169,7 @@ Where:
 
 | Figure 7                                                                               | Figure 8                                                                             | Figure 9                                                                                      |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| <img src="./xpmmxe2k.png" style="width:2.33333in;height:2.70833in" /> Undirected Graph | <img src="./hdvlenka.png" style="width:2.32292in;height:2.11458in" /> Directed Graph | <img src="./zf34x5do.png" style="width:2.60417in;height:2.45833in" /> Weighted Directed Graph |
+| <img src="./assets/xpmmxe2k.png" style="width:2.33333in;height:2.70833in" /> Undirected Graph | <img src="./assets/hdvlenka.png" style="width:2.32292in;height:2.11458in" /> Directed Graph | <img src="./assets/zf34x5do.png" style="width:2.60417in;height:2.45833in" /> Weighted Directed Graph |
 
 #### Space Complexity:
 
@@ -188,7 +188,7 @@ $$
 
 | Figure 10                                                                             | Figure 11                                                                            |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| <img src="./rbjmvu52.png" style="width:2.3125in;height:1.48958in" />  | <img src="./stzpbll5.png" style="width:2.35417in;height:2.27083in" />  |
+| <img src="./assets/rbjmvu52.png" style="width:2.3125in;height:1.48958in" />  | <img src="./assets/stzpbll5.png" style="width:2.35417in;height:2.27083in" />  |
 | Undirected Graph | Directed Graph |
 
 #### Space Complexity:
@@ -220,7 +220,7 @@ To solve problems using graphs, traversal is key.
 * Graphs may contain **cycles** → infinite recursion possible.
 * Graphs may be **disconnected** → traversal may cover only one component.
 
-<img src="./f25eu0lc.png" style="width:6.5in;height:2.38542in" />
+<img src="./assets/f25eu0lc.png" style="width:6.5in;height:2.38542in" />
 
 ### General Traversal Algorithm (Pseudo-code)
 
@@ -266,14 +266,14 @@ Algorithm Traverse-Graph(G)
 
 | Figure 12                                                         | Figure 13                                                             |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------- |
-| <img src="./wtysvu2u.png" style="width:4.54167in;height:3.5in" /> | <img src="./yuzn0vci.png" style="width:4.71875in;height:3.73958in" /> |
+| <img src="./assets/wtysvu2u.png" style="width:4.54167in;height:3.5in" /> | <img src="./assets/yuzn0vci.png" style="width:4.71875in;height:3.73958in" /> |
 | BFS traversal illustration                                        | BFS step expansion                                                    |
 
 * **Depth-First Traversal (DFS):** Uses a **stack**.
 
 | Figure 14                                                           |
 | ------------------------------------------------------------------- |
-| <img src="./xwyzyjjy.png" style="width:4.625in;height:3.95833in" /> |
+| <img src="./assets/xwyzyjjy.png" style="width:4.625in;height:3.95833in" /> |
 | DFS Traversal                                                       |
 
 ---
@@ -287,3 +287,4 @@ Algorithm Traverse-Graph(G)
 * With Boolean array → `O(n + m)`.
 
 ---
+
