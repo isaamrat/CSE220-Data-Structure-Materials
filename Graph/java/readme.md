@@ -1,6 +1,6 @@
 # Undirected-Unweighted-Graph [UUG]
 ```mermaid
-graph TD;
+graph LR;
     0 --- 2;
     0 --- 4;
     0 --- 5;
@@ -14,7 +14,7 @@ graph TD;
 
 # Directed-Unweighted-Graph [DUG]
 ```mermaid
-graph TD;
+graph LR;
     0 --> 1;
     0 --> 4;
     1 --> 5;
@@ -27,7 +27,7 @@ graph TD;
 ---
 # Directed-Wighted-Graph [DWG]
 ```mermaid
-graph TD;
+graph LR;
     0 -->|2| 1;
     0 -->|4| 4;
     1 -->|7| 5;
