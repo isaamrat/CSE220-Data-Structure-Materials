@@ -109,47 +109,79 @@
  }
  ```
 
- ### Python Implementation
- #### `sumAll(mat)`
- ```python
- def sumAll(mat):
-     return sum(sum(row) for row in mat)
- ```
-
- #### `columnSum(mat)`
- ```python
- def columnSum(mat):
-     col_sums = [sum(row[j] for row in mat) for j in range(len(mat[0]))]
-     print(col_sums)
- ```
-
- #### `rowSum(mat)`
- ```python
- def rowSum(mat):
-     row_sums = [sum(row) for row in mat]
-     print(row_sums)
- ```
-
- #### `multiplyMatrix(matA, matB)`
- ```python
- def multiplyMatrix(matA, matB):
-     import numpy as np
-     result = np.dot(matA, matB)
-     print(result)
- ```
-
- #### `printDiagonal(mat)`
- ```python
- def printDiagonal(mat):
-     for i in range(len(mat)):
-         print(mat[i][i])
- ```
-
  ## Applications of 2D Arrays
  - **Image Processing:** Pixels in images are stored in a 2D array.
  - **Graph Representations:** Adjacency matrices store graph edges.
  - **Game Development:** Chess boards and grids use 2D arrays.
  - **Scientific Computing:** Data tables in simulations.
  - **Matrix Operations:** Fundamental to machine learning.
+---
+# Problems
+
+ ## Spiral Matrix Traversal
+
+ ### Problem Statement
+
+ Given an `m x n` matrix, return all the elements of the matrix in **spiral order**.
+
+ Start from the top-left corner and move:
+ 1. **Right** across the top row,
+ 2. **Down** the last column,
+ 3. **Left** across the bottom row,
+ 4. **Up** the first column.
+
+ Repeat this process inward layer by layer until all elements are traversed.
+
+ ---
+
+ ### Example 1
+![alt text](assets/image.png)
+
+ **Input:**
+ ```java
+ matrix = [
+   [1, 2, 3],
+   [4, 5, 6],
+   [7, 8, 9]
+ ]
+ ```
+
+ **Output:**
+ ```java
+ [1, 2, 3, 6, 9, 8, 7, 4, 5]
+ ```
+
+ ---
+
+ ### Example 2
+
+ ![alt text](assets/image2.png)
+
+ **Input:**
+ ```text
+ matrix = [
+   [1, 2, 3, 4],
+   [5, 6, 7, 8],
+   [9, 10, 11, 12]
+ ]
+ ```
+
+ **Output:**
+ ```text
+ [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+ ```
+
+ ---
+
+ ### Constraints
+ - `m == matrix.length`
+ - `n == matrix[i].length`
+ - `1 <= m, n <= 100`
+ - `-100 <= matrix[i][j] <= 100`
+
+ ---
+
+ Implement a function:
+ that returns all elements of the matrix in spiral order.
 
 
