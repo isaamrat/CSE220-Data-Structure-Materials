@@ -91,6 +91,50 @@ public class twoDArray {
             System.out.println(mat[i][col - 1 - i]);
         }
     }
+    
+    // Method to print the matrix in spiral order
+    public static void printSpiral(int[][] mat) {
+        // Define matrix boundaries
+        int rowStart = 0;
+        int rowEnd = mat.length - 1;
+        int colStart = 0;
+        int colEnd = mat[0].length - 1;
+    
+        // Traverse the matrix in spiral order
+        while (rowStart <= rowEnd && colStart <= colEnd) {
+    
+            // Traverse top row (left → right)
+            for (int i = colStart; i <= colEnd; i++) {
+                System.out.print(mat[rowStart][i] + " ");
+            }
+            rowStart++; // Move top boundary down
+    
+            // Traverse right column (top → bottom)
+            for (int i = rowStart; i <= rowEnd; i++) {
+                System.out.print(mat[i][colEnd] + " ");
+            }
+            colEnd--; // Move right boundary left
+    
+            // Traverse bottom row (right → left), if rows remain
+            if (rowStart <= rowEnd) {
+                for (int i = colEnd; i >= colStart; i--) {
+                    System.out.print(mat[rowEnd][i] + " ");
+                }
+                rowEnd--; // Move bottom boundary up
+            }
+    
+            // Traverse left column (bottom → top), if columns remain
+            if (colStart <= colEnd) {
+                for (int i = rowEnd; i >= rowStart; i--) {
+                    System.out.print(mat[i][colStart] + " ");
+                }
+                colStart++; // Move left boundary right
+            }
+        }
+    
+        System.out.println(); // Newline after full traversal
+    }
+
 
     // Here in printMatrix function multiple inbuilt functions are used to make the formatting look good. You are not allowed to use this in your code.
     public static void printMatrix(int[][] mat) {
