@@ -81,6 +81,38 @@ def multiplyMatrix(matA, matB):
                 result[i][j] += matA[i][k] * matB[k][j] # Perform matrix multiplication
     printMatrix(result) # Print the result matrix
 
+def print_spiral(matrix):
+    """
+    Print matrix in spiral order.
+    """
+    # Check for empty matrix
+    if not matrix or not matrix[0]:
+        return
+    # Define matrix boundaries
+    row_start, row_end = 0, len(matrix) - 1
+    col_start, col_end = 0, len(matrix[0]) - 1
+    # Traverse the matrix in spiral order
+    while row_start <= row_end and col_start <= col_end:
+        # Traverse top row (left → right)
+        for c in range(col_start, col_end + 1):
+            print(matrix[row_start][c], end=" ")
+        row_start += 1  # Move top boundary down
+        # Traverse right column (top → bottom)
+        for r in range(row_start, row_end + 1):
+            print(matrix[r][col_end], end=" ")
+        col_end -= 1  # Move right boundary left
+        # Traverse bottom row (right → left), if rows remain
+        if row_start <= row_end:
+            for c in range(col_end, col_start - 1, -1):
+                print(matrix[row_end][c], end=" ")
+            row_end -= 1  # Move bottom boundary up
+        # Traverse left column (bottom → top), if columns remain
+        if col_start <= col_end:
+            for r in range(row_end, row_start - 1, -1):
+                print(matrix[r][col_start], end=" ")
+            col_start += 1  # Move left boundary right
+    print()  # Newline after full traversal
+
 # Main method with test cases
 if __name__ == "__main__":
     # Test case for printMatrix
