@@ -1,5 +1,5 @@
 
- # [Practice Problems](#Practice-Problems)
+ # [Practice Problems](#practice-problems-1)
  # Two-Dimensional Arrays - Java and Python Implementations
 
  ## Introduction to Two-Dimensional Arrays
