@@ -1,4 +1,5 @@
 
+ # [Practice Problems](#Practice-Problems)
  # Two-Dimensional Arrays - Java and Python Implementations
 
  ## Introduction to Two-Dimensional Arrays
@@ -116,11 +117,230 @@
  - **Scientific Computing:** Data tables in simulations.
  - **Matrix Operations:** Fundamental to machine learning.
 ---
-# Problems
+# Practice-Problems
 
- ## Spiral Matrix Traversal
+## Question 1
 
- ### Problem Statement
+**Problem:**
+Create a function that takes a 2D matrix and a target value as input and returns `True` if the target value exists in the matrix, otherwise returns `False`.
+
+**Example 1:**
+
+```
+Input:
+matrix =
+|  1 |  4 |  7 | 11 | 15 |
+|  2 |  5 |  8 | 12 | 19 |
+|  3 |  6 |  9 | 16 | 22 |
+| 10 | 13 | 14 | 17 | 24 |
+| 18 | 21 | 23 | 26 | 30 |
+
+target = 5
+Output:
+True
+```
+
+**Example 2:**
+
+```
+Input:
+matrix =
+|  1 |  4 |  7 | 11 | 15 |
+|  2 |  5 |  8 | 12 | 19 |
+|  3 |  6 |  9 | 16 | 22 |
+| 10 | 13 | 14 | 17 | 24 |
+| 18 | 21 | 23 | 26 | 30 |
+
+target = 99
+Output:
+False
+```
+
+---
+
+## Question 2
+
+**Problem:**
+Create a function that takes two matrices of the same shape as input and returns their summation matrix.
+
+**Example 1:**
+
+```
+Input:
+Matrix1 =
+| 2 | 2 | 1 |
+| 1 | 5 | 0 |
+| 0 | 0 | 1 |
+
+Matrix2 =
+| 5 | 7 | 1 |
+| 0 | 3 | 0 |
+| 1 | 0 | 8 |
+
+Output:
+Resulted_Matrix =
+| 7 | 9 | 2 |
+| 1 | 8 | 0 |
+| 1 | 0 | 9 |
+```
+
+---
+
+## Question 3
+
+**Problem:**
+Write a function to calculate the sum of the main diagonal elements of a square matrix.
+
+**Example 1:**
+
+```
+Input:
+matrix =
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+
+Output:
+15
+```
+
+---
+
+## Question 4
+
+**Problem:**
+Create a function that takes two matrices as input and multiplies those two matrices. Return the resulting matrix.
+
+**Example 1:**
+
+```
+Input:
+matrix1 =
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+matrix2 =
+| 10 | 11 |
+| 20 | 21 |
+| 30 | 31 |
+
+Output:
+resulted_matrix =
+| 140 | 146 |
+| 320 | 335 |
+```
+
+---
+
+## Question 5
+
+**Problem:**
+Write a function that takes a 2D matrix as input. If any element in the matrix is 0, the function should set all elements in that element's row and column to 0. The changes should be made directly to the original matrix (in-place).
+
+**Example 1:**
+
+```
+Input:
+matrix =
+| 1 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+Output:
+resulted_matrix =
+| 1 | 0 | 1 |
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+```
+
+**Example 2:**
+
+```
+Input:
+matrix =
+| 1 | 2 | 0 |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+
+Output:
+resulted_matrix =
+| 0 | 0 | 0 |
+| 4 | 5 | 0 |
+| 7 | 8 | 0 |
+```
+
+---
+
+## Question 6
+
+**Problem:**
+Create a function that takes a 2D matrix as input and returns an array of its boundary elements in the order they are encountered during a boundary traversal. The traversal should start from the top-left corner and go clockwise.
+
+**Example 1:**
+
+```
+Input:
+matrix =
+|  1 |  2 |  3 |  4 |
+|  5 |  6 |  7 |  8 |
+|  9 | 10 | 11 | 12 |
+| 13 | 14 | 15 | 16 |
+
+Output:
+[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5]
+```
+
+---
+
+## Question 7
+
+**Problem:**
+Create a function that takes a 2D square matrix as input and modifies it to become its transpose in-place.
+
+**Example 1:**
+
+```
+Input:
+matrix =
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+
+Output:
+transposed_matrix =
+| 1 | 4 | 7 |
+| 2 | 5 | 8 |
+| 3 | 6 | 9 |
+```
+
+---
+
+## Question 8
+
+**Problem:**
+Create a function that takes an n×n 2D matrix representing an image and rotates the image by 90 degrees clockwise. The rotation should be done in-place.
+
+**Example 1:**
+
+```
+Input:
+image =
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+
+Output:
+rotated_image =
+| 7 | 4 | 1 |
+| 8 | 5 | 2 |
+| 9 | 6 | 3 |
+```
+
+## Question 9
+**Problem:**
+Spiral Matrix Traversal
+
+ **Problem Statement**
 
  Given an `m x n` matrix, return all the elements of the matrix in **spiral order**.
 
@@ -133,7 +353,6 @@
  Repeat this process inward layer by layer until all elements are traversed.
 
  ---
-
  ### Example 1
 ![alt text](assets/image.png)
 
